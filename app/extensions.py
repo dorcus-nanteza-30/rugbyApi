@@ -1,5 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
-#from sqlalchemy import Enum as SqlEnum
+from flask_migrate import Migrate
+from flask_bcrypt import Bcrypt
+#from flask_jwt_extended import JWTManager
 
-
+# Initialize the extensions
 db = SQLAlchemy()
+migrate = Migrate()
+bcrypt = Bcrypt()
+#jwt = JWTManager()

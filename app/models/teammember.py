@@ -1,4 +1,3 @@
-
 from app.extensions import db
 
 class TeamMember(db.Model):
@@ -10,6 +9,9 @@ class TeamMember(db.Model):
     jersey_number_of_player = db.Column(db.String(30), unique=True, nullable=False)
     biography_of_player = db.Column(db.String(255), nullable=False)
     image_of_player = db.Column(db.Text, nullable=False)
+    # Trys_scored = db.Column(db.Integer, default=0)
+    # tackles_made = db.Column(db.Integer, default=0)
+    # assists = db.Column(db.Integer, default=0)
 
     # relationships
     user = db.relationship("User", back_populates="team_members")
